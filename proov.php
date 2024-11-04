@@ -45,17 +45,43 @@ $tekst2 = ' 	Põhitoestus võetakse ära 11.11 kui võlgnevused ei ole paranadat
 echo "<br>";
 echo "<pre>$tekst2</pre>";
 echo "<br>";
-echo "<pre>".trim($tekst2)."";
+echo "<pre>".trim($tekst2);
 echo "<br>";
-echo "<pre>".ltrim($tekst2)."</pre>";
+echo "<pre>".ltrim($tekst2);
 echo "<br>";
-echo "<pre>".rtrim($tekst2)."</pre>";
+echo "<pre>".rtrim($tekst2);
 echo "<br>";
 $tekst2 = 'Põhitoestus võetakse ära 11.11 kui võlgnevused ei ole paranadatud';
 echo trim($tekst2, "a, v, k..p, d");
+echo "<br>";
+
+
+echo "<h2>Tekst kui massiiv</h2>";
 //Tekst kui massiiv
 echo "<br>";
-$tekst3 = 'All thinking men are atheists';
-echo $tekst[0]; 				//A
+$tekst3 = 'Minu nimi on Gleb';
+echo $tekst3[13]; 				//G
 echo '<br>';
-echo $tekst[4]; 				//t
+echo $tekst3[6]; 				//i
+echo "<br>";
+echo "<br>";
+$tekst3 = 'Minu nimi on Gleb';
+echo substr($tekst3, 3, 5);		//u nim
+echo '<br>';
+echo substr($tekst3, 1, 13);	//inu nimi on G
+echo '<br>';
+echo substr($tekst3, -8, 7);		//on Gle
+echo '<br>';
+echo "<br>";
+$tekst3 = 'Minu nimi on Gleb';
+print_r(str_word_count($tekst3, 1));		//Array ( [0] => Minu [1] => Nimi [2] => on [3] => Gleb)
+echo '<br>';
+echo "<br>";
+$tekst3 = 'Minu nimi on Gleb';
+$sona = str_word_count($tekst3, 1);
+echo $sona[2];							//on
+echo '<br>';
+echo "<br>";
+$tekst3 = 'Minu nimi on Gleb';
+print_r(str_word_count($tekst3, 2));
+//Array ( [0] => Minu [5] => nimi [10] => on [13] => Gleb )
