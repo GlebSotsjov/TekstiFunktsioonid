@@ -20,15 +20,14 @@ include('nav.php');
     if(isset($_GET["leht"])){
         include('content/'.$_GET["leht"]);
     } else {
-        echo "Tere tulemast!";
+        include('content/kodu.php');
     }
     ?>
 
 </section>
 <?php
-    echo "Gleb Sõtšjov &copy";
-    echo "<br>";
-    echo date('Y');
+//jalus
+include('footer.php');
 ?>
 </body>
 </html>
