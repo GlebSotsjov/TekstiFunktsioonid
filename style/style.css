@@ -1,4 +1,4 @@
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,11 +6,11 @@ ul {
     background-color: #333;
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -19,7 +19,7 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+nav li a:hover {
     background-color: #111;
 }
 
@@ -33,4 +33,19 @@ footer {
     position: fixed;
     font-size: small;
     width: 100%;
+}
+header {}
+
+div#kodu{
+    width: 50%;
+    padding: 2%;
+    border: #111111 1px solid;
+    background-color: hotpink;
+
+}
+div#kuupaev{
+    width: 50%;
+    padding: 2%;
+    border: #111111 1px solid;
+    background-color: hotpink;
 }

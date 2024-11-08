@@ -9,6 +9,9 @@
         <li>
             <a href="?leht=moistatus.php">Mõistatus</a>
         </li>
+        <li>
+            <a href="?leht=ajafunktsioonid.php">Ajafunktsioonid</a>
+        </li>
     </ul>
 </nav>
 
