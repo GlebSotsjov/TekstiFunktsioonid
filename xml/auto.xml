@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<autod>
+    <auto>
+        <mark>Mazda</mark>
+        <autonumber>123ABC</autonumber>
+        <omanik>Artem</omanik>
+        <v_aasta>2020</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Audi</mark>
+        <autonumber>999CCC</autonumber>
+        <omanik>Andrei</omanik>
+        <v_aasta>2023</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Mercedes</mark>
+        <autonumber>444GID</autonumber>
+        <omanik>Dima</omanik>
+        <v_aasta>2022</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Subaru</mark>
+        <autonumber>000OOO</autonumber>
+        <omanik>Gleb</omanik>
+        <v_aasta>2019</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Nissan</mark>
+        <autonumber>GLS001</autonumber>
+        <omanik>Grisha</omanik>
+        <v_aasta>2018</v_aasta>
+    </auto>
+</autod>
