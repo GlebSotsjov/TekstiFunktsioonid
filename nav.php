@@ -19,7 +19,10 @@
             <a href="?leht=massiivid.php">Massiivid</a>
         </li>
         <li>
-            <a href="?leht=xml/autodXMLfailist.php">XML autod</a>
+            <a href="xml/autodXMLfailist.php">XML autod</a>
+        </li>
+        <li>
+            <a href="xml/TARpv23XMLfailist.php">Ruhm tabel</a>
         </li>
     </ul>
 </nav>
