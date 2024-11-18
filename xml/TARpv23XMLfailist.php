@@ -1,6 +1,10 @@
 <?php
+if (isset($_GET['code'])) {die(highlight_file(__FILE__));}
+
 $ruhm = simplexml_load_file("Tarpv23.xml");
 
+// Funktsioon otsib õpilasi nende juuksevärvi järgi /
+// Функция ищет учеников с их цветом волос
 function otsingJuuksevarv($paring) {
     global $ruhm;
     $opilanevastus = array();
@@ -12,6 +16,8 @@ function otsingJuuksevarv($paring) {
     return $opilanevastus;
 }
 
+// Lisab uue õpilase XML-i ja salvestab faili /
+// Добавляет нового ученика в XML и сохраняет файл
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POST['koduleht']) && isset($_POST['sugu']) && isset($_POST['juuksevarv'])) {
     $uusOpilane = $ruhm->addChild('opilane');
     $uusOpilane->addChild('nimi', htmlspecialchars($_POST['nimi']));
@@ -102,17 +108,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
 <body>
 <h2>Õpilaste rühm TARpv23</h2>
 
-<!-- Vorm otsimiseks -->
+<!-- Vorm otsimiseks / Форма поиска -->
 <form method="post" action="?">
     <label for="otsing">Otsi juuksevärvi:</label>
     <input type="text" id="otsing" name="otsing" placeholder="Sisesta juuksevärv">
     <input type="submit" value="OK">
 </form>
-<form action="visit.php" method="post">
-    <input type="submit" name="Click" value="Vaadata lehe koodi">
-</form>
 
 <?php
+// Näitab konkreetse õpilase juuksevärvi, kui otsingut ei toimu, naaseb algsesse asendisse /
+// Показывает определенный цвет волос ученика , если поиска нет возврощает в исходное положение
 if (!empty($_POST['otsing'])) {
     $opilanevastus = otsingJuuksevarv($_POST['otsing']);
     echo "<table>";
@@ -154,14 +159,15 @@ if (!empty($_POST['otsing'])) {
 ?>
 
 <h2>Lisa uus õpilane</h2>
+<!-- Vorm uue õpilase lisamiseks / Форма добавления нового ученика -->
 <form method="post" action="">
     <input type="text" name="nimi" placeholder="Nimi" required>
     <input type="text" name="koduleht" placeholder="Koduleht" required>
     <select name="sugu" required>
-        <option value="Mees">Mees</option>
-        <option value="Naine">Naine</option>
+        <option value="mees">mees</option>
+        <option value="naine">naine</option>
     </select>
-    <input type="text" name="juuksevarv" placeholder="Juuksevärv" required>
+    <input type="text" name="juuksevarv" placeholder="Juuksevarv" required>
     <input type="submit" value="Lisa">
 </form>
 
