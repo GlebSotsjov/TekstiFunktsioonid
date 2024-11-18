@@ -36,92 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TARpv23 rühm Veebirakendus</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: lightcyan;
-            color: gray;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: black;
-        }
-
-        table {
-            width: 100%;
-            max-width: 800px;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: white;
-            overflow-x: auto;
-        }
-
-        th, td {
-            padding: 10px;
-            border: 1px solid white;
-            text-align: center;
-        }
-
-        th {
-            background-color: blue;
-            color: white;
-        }
-
-        a {
-            color: blue;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        input[type="text"], select {
-            padding: 8px;
-            width: 100%;
-            max-width: 300px;
-            border: 1px solid white;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        input[type="submit"] {
-            padding: 8px 15px;
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            max-width: 200px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: lightcyan;
-        }
-        /* Ключевое слово @media — основной инструмент для работы медиазапросами. По сути, это обёртка для стиля: всё, что находится внутри, применяется или не применяется в зависимости от того, выполняется ли условие. */
-        @media (max-width: 600px) {
-            input[type="text"], select, input[type="submit"] {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TARpv23 rühm Veebirakendus</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
 <h2>Õpilaste rühm TARpv23</h2>
 
