@@ -20,7 +20,7 @@ function otsingJuuksevarv($paring) {
 // Добавляет нового ученика в XML и сохраняет файл
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POST['koduleht']) && isset($_POST['sugu']) && isset($_POST['juuksevarv'])) {
     $uusOpilane = $ruhm->addChild('opilane');
-    $uusOpilane->addChild('nimi', htmlspecialchars($_POST['nimi']));
+    $uusOpilane->addChild('nimi', htmlspecialchars($_POST['nimi'])); // htmlspecialchars() преобразует спецсимволы в HTML-сущности для защиты от XSS.
     $uusOpilane->addChild('koduleht', htmlspecialchars($_POST['koduleht']));
     $uusOpilane->addChild('sugu', htmlspecialchars($_POST['sugu']));
     $uusOpilane->addChild('juuksevarv', htmlspecialchars($_POST['juuksevarv']));
@@ -111,7 +111,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
 <!-- Vorm otsimiseks / Форма поиска -->
 <form method="post" action="?">
     <label for="otsing">Otsi juuksevärvi:</label>
-    <input type="text" id="otsing" name="otsing" placeholder="Sisesta juuksevärv">
+    <select id="otsing" name="otsing">
+        <option value="">vali</option>
+        <option value="kastani">kastani</option>
+        <option value="tuumepruun">tuumepruun</option>
+        <option value="heelepruun">helepruun</option>
+        <option value="punane">punane</option>
+        <option value="blond">blond</option>
+        <option value="sinine">sinine</option>
+    </select>
     <input type="submit" value="OK">
 </form>
 
