@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['code'])) {die(highlight_file(__FILE__));}
+if (isset($_GET['code'])) { die(highlight_file(__FILE__)); }
 
 $ruhm = simplexml_load_file("Tarpv23.xml");
 
@@ -53,10 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
         }
 
         table {
-            width: 80%;
+            width: 100%;
+            max-width: 800px;
             border-collapse: collapse;
             margin-top: 20px;
             background-color: white;
+            overflow-x: auto;
         }
 
         th, td {
@@ -81,14 +83,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
 
         form {
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 500px;
         }
 
         input[type="text"], select {
             padding: 8px;
-            width: 200px;
+            width: 100%;
+            max-width: 300px;
             border: 1px solid white;
             border-radius: 4px;
-            margin-right: 10px;
             text-align: center;
         }
 
@@ -98,10 +106,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nimi']) && isset($_POS
             color: black;
             border: none;
             border-radius: 4px;
+            width: 100%;
+            max-width: 200px;
         }
 
         input[type="submit"]:hover {
             background-color: lightcyan;
+        }
+        /* Ключевое слово @media — основной инструмент для работы медиазапросами. По сути, это обёртка для стиля: всё, что находится внутри, применяется или не применяется в зависимости от того, выполняется ли условие. */
+        @media (max-width: 600px) {
+            input[type="text"], select, input[type="submit"] {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
